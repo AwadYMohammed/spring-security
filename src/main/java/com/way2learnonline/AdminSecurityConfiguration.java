@@ -3,33 +3,37 @@ package com.way2learnonline;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.www.DigestAuthenticationEntryPoint;
 
 
 @Configuration
 @Order(1)
 // TODO-4 Make the below class extend WebSecurityConfigurerAdapter
 
-public class AdminSecurityConfiguration //extends WebSecurityConfigurerAdapter
+public class AdminSecurityConfiguration extends WebSecurityConfigurerAdapter
 {
 	
 	
 	
 	// TODO-5 uncomment the below to configure DigestAuthenticationEntryPoint
 	
-	/*
+	
 	private DigestAuthenticationEntryPoint getDigestEntryPoint() {
 		DigestAuthenticationEntryPoint digestEntryPoint = new DigestAuthenticationEntryPoint();
 		digestEntryPoint.setRealmName("admin-digest-realm");
 		digestEntryPoint.setKey("somedigestkey");
 		return digestEntryPoint;
 	}
-	*/
+	
 	
 	
 
 	// TODO-6 uncomment the below PasswordEncoder Bean
 	
-/*
+
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
@@ -38,7 +42,7 @@ public class AdminSecurityConfiguration //extends WebSecurityConfigurerAdapter
 		return NoOpPasswordEncoder.getInstance();
 	}
 	
-	*/
+	
 	
 	
 	// TODO-7 uncomment the below method to configure authentication manager
