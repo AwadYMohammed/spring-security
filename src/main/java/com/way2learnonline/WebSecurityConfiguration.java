@@ -11,12 +11,12 @@ import org.springframework.core.annotation.Order;
 @Configuration
 @Order(2)
 // TODO-2 Make the below class to extend WebSecurityConfigurerAdapter
-public class WebSecurityConfiguration //extends WebSecurityConfigurerAdapter 
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter 
 {
 	
 	// TODO-3 Uncomment the below to add httpBasic authentication for your app
 	
-	/*
+	
 	protected void configure(HttpSecurity http) throws Exception {		
 		
 		  http .authorizeRequests() 
@@ -25,7 +25,7 @@ public class WebSecurityConfiguration //extends WebSecurityConfigurerAdapter
 		
 	}
 	
-	*/
+	
 	
 	
 	
